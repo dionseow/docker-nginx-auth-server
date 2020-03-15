@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    nginx:
+        build: ./nginx
+        ports:
+            - 80:80
+
+    auth:
+        build: ./auth
+
+    app:
+        build: ./app
+
