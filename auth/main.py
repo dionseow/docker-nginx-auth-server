@@ -3,11 +3,9 @@ app = Flask(__name__)
 
 @app.route("/auth")
 def hello():
-    print('1')
     if request.method == 'GET':
         if 'number' in request.headers:
             num = request.headers.get('number')
-            print(num)
             if num == '12345':
                 print('authenticated')
                 return Response("{'message': 'Successfully authenticated'}",
